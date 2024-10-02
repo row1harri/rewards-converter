@@ -8,12 +8,12 @@ public class RewardValue{
 
     public RewardValue(double cashVal){
         cash = cashVal;
-        miles = (int)(cashVal * cTom);
+        //miles = (int)(cashVal * cTom);
     }
 
     public RewardValue(int mileage){
         miles = mileage;
-        cash = mileage * mToc;
+        //cash = mileage * mToc;
     }
 
     public static double getCashValue(){
@@ -23,4 +23,13 @@ public class RewardValue{
     public static int getMilesValue(){
         return miles;
     }
+
+    public static int convertToMiles(){
+        return  (int)(cash*cTom);
+    }
+
+    public static double convertToCash(){
+        return (miles*mToc);
+    }
 }
+
